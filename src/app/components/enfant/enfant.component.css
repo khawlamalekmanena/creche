@@ -1,0 +1,153 @@
+/* Formulaire d'inscription */
+form {
+  background: white;
+  padding: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin: 20px auto; /* Centrer horizontalement */
+  border-radius: 8px;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column; /* Pour le centrage vertical des éléments */
+  align-items: center; /* Centrer les éléments horizontalement */
+}
+
+form div {
+  margin-bottom: 15px;
+  width: 100%; /* Assure que les éléments enfants prennent toute la largeur du formulaire */
+}
+
+form label {
+  display: block;
+  margin-bottom: 5px;
+  color: #444;
+  width: 100%; /* Assure que le label prenne toute la largeur */
+}
+
+form input, form select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+form button {
+  background: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px; /* Espace au-dessus du bouton */
+  align-self: center; /* Centrer le bouton */
+}
+
+form button:hover {
+  background: white;
+  color: #007bff;
+  border: 2px solid #007bff;
+}
+
+/* Liste des Enfants */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background: #007bff;
+  color: white;
+}
+
+td {
+  background: white;
+}
+
+tbody tr:hover {
+  background: #f1f1f1;
+}
+.styled-text {
+  color: #007bff;
+  font-weight: bold;
+  font-size: 24px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  border: 2px solid #007bff;
+  padding: 10px;
+  margin: 10px 0;
+  font-family: 'Arial', sans-serif;
+  border-radius: 8px;
+  background-color: #ffe6e6;
+  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.2);
+}
+/* styles.css or component-specific CSS file */
+.btn {
+  border: 1px solid transparent;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 6px 12px;
+  margin: 2px;
+  transition: background-color 0.2s, border-color 0.2s;
+}
+
+.btn-edit {
+  background-color: #007bff; /* Blue */
+  border-color: #007bff;
+}
+
+.btn-edit:hover {
+  background-color: #0056b3; /* Darker blue */
+  border-color: #004085;
+}
+
+.btn-delete {
+  background-color: #dc3545; /* Red */
+  border-color: #dc3545;
+}
+
+.btn-delete:hover {
+  background-color: #c82333; /* Darker red */
+  border-color: #bd2130;
+}
+/* Style pour le conteneur de la barre de recherche */
+.search-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Aligne le label et l'input à gauche */
+  margin: 20px 0; /* Espace en haut et en bas du conteneur */
+  width: 100%; /* Assure que le conteneur prenne toute la largeur disponible */
+}
+
+/* Style pour le label */
+.search-container label {
+  margin-bottom: 5px;
+  color: #444;
+  font-weight: bold;
+}
+
+/* Style pour l'input de recherche */
+.search-container input {
+  width: 100%; /* Prend toute la largeur disponible */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Légère ombre pour l'input */
+  transition: border-color 0.2s, box-shadow 0.2s; /* Transition pour les changements de style */
+}
+
+/* Style pour l'input au focus */
+.search-container input:focus {
+  border-color:#007bff;
+  box-shadow: 0 0 8px rgba(240, 84, 98, 0.3); /* Ombre rougeâtre au focus */
+  outline: none; /* Retire le contour par défaut au focus */
+}
+

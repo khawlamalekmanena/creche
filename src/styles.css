@@ -1,0 +1,40 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~bootstrap/dist/css/bootstrap.min.css';
+/* style.css */
+
+/* Styles pour le menu de navigation */
+.custom-nav {
+    background-color: #f8f9fa; /* Couleur de fond claire */
+    border-bottom: 1px solid #e3e3e3; /* Bordure en bas pour démarquer la nav */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Légère ombre pour donner de la profondeur */
+  }
+  
+  .custom-nav .navbar-brand {
+    font-family: 'Handlee', cursive; /* Utilisation d'une police Google Font */
+    font-size: 1.5rem; /* Taille de la police de la marque */
+  }
+  
+  .custom-nav .nav-link {
+    font-family: 'Nunito', sans-serif; /* Police Google Font pour les liens */
+    color: #343a40; /* Couleur du texte des liens */
+    margin-right: 15px; /* Espacement entre les liens */
+    transition: color 0.3s ease; /* Transition pour le changement de couleur */
+  }
+  
+  .custom-nav .nav-link:hover {
+    color: #007bff; /* Couleur lors du survol */
+  }
+  
+  .custom-nav .nav-item.active .nav-link {
+    color: #007bff; /* Couleur pour le lien actif */
+    font-weight: bold; /* Gras pour le lien actif */
+  }
+  
+  .navbar-toggler {
+    border: none; /* Retirer la bordure du bouton de toggler */
+  }
+  
+  .navbar-toggler-icon {
+    color: #343a40; /* Couleur de l'icône du toggler */
+  }
+  

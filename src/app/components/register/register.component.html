@@ -1,0 +1,137 @@
+<section class="vh-100" style="background-color: #eee;">
+    <div class="container h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-lg-12 col-xl-11">
+                <div class="card text-black" style="border-radius: 25px;">
+                    <div class="card-body p-md-5">
+                        <div class="row justify-content-center">
+                            <!-- Form Column -->
+                            <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
+                                <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">S'inscrire</p>
+
+                                <!-- Formulaire d'inscription -->
+                                <form (ngSubmit)="onSubmit()" class="mx-1 mx-md-4" [formGroup]="registrationForm">
+                                    <!-- Nom -->
+                                    <div class="d-flex flex-row align-items-center mb-4">
+                                        <div class="form-outline flex-fill mb-0">
+                                            <input type="text" id="nom" class="form-control" formControlName="nom" required />
+                                            <label class="form-label" for="nom">Nom</label>
+                                        </div>
+                                    </div>
+
+                                    <!-- Prénom -->
+                                    <div class="d-flex flex-row align-items-center mb-4">
+                                        <div class="form-outline flex-fill mb-0">
+                                            <input type="text" id="prenom" class="form-control" formControlName="prenom" required />
+                                            <label class="form-label" for="prenom">Prénom</label>
+                                        </div>
+                                    </div>
+
+                                    <!-- Adresse -->
+                                    <div class="d-flex flex-row align-items-center mb-4">
+                                        <div class="form-outline flex-fill mb-0">
+                                            <input type="text" id="adresse" class="form-control" formControlName="adresse" required />
+                                            <label class="form-label" for="adresse">Adresse</label>
+                                        </div>
+                                    </div>
+
+                                    <!-- Téléphone -->
+                                    <div class="d-flex flex-row align-items-center mb-4">
+                                        <div class="form-outline flex-fill mb-0">
+                                            <input type="text" id="telephone" class="form-control" formControlName="telephone" maxlength="8" required />
+                                            <label class="form-label" for="telephone">Téléphone</label>
+                                        </div>
+                                    </div>
+
+                                    <!-- Email -->
+                                    <div class="d-flex flex-row align-items-center mb-4">
+                                        <div class="form-outline flex-fill mb-0">
+                                            <input type="email" id="email" class="form-control" formControlName="email" required />
+                                            <label class="form-label" for="email">Email</label>
+                                        </div>
+                                    </div>
+
+                                    <!-- Mot de passe -->
+                                    <div class="d-flex flex-row align-items-center mb-4">
+                                        <div class="form-outline flex-fill mb-0">
+                                            <input type="password" id="password" class="form-control" formControlName="password"
+                                                pattern="^(?=.*\d)(?=.*[a-zA-Z])(?=.*[^a-zA-Z0-9])\S{8,}$"
+                                                title="Le mot de passe doit contenir au moins un chiffre, une lettre, un symbole et comporter au moins 8 caractères" required />
+                                            <label class="form-label" for="password">Mot de passe</label>
+                                        </div>
+                                    </div>
+
+                                    <!-- Retapez le mot de passe -->
+                                    <div class="d-flex flex-row align-items-center mb-4">
+                                        <div class="form-outline flex-fill mb-0">
+                                            <input type="password" id="repassword" class="form-control" formControlName="repassword" required />
+                                            <label class="form-label" for="repassword">Confirmer le mot de passe</label>
+                                        </div>
+                                    </div>
+
+                                    <!-- Sélection du rôle -->
+                                    <div class="d-flex flex-row align-items-center mb-4">
+                                        <div class="form-outline flex-fill mb-0">
+                                            <select id="role" class="form-select" (change)="onRoleChange($event)" formControlName="role" required>
+                                                <option value="" selected disabled>Qui êtes-vous ?</option>
+                                                <option value="parent">Parent</option>
+                                                <option value="employe">Employé</option>
+                                                <option value="admin">Administrateur</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <!-- Champs spécifiques au rôle Parent -->
+                                    <div *ngIf="selectedRole === 'parent'" class="parent-fields conditional-fields">
+                                        <div class="form-outline flex-fill mb-0">
+                                            <input type="text" id="fidelite" class="form-control" formControlName="fidelite" />
+                                            <label class="form-label" for="fidelite">Fidélité (pour les parents)</label>
+                                        </div>
+                                    </div>
+
+                                    <!-- Champs spécifiques à l'Employé -->
+                                    <div *ngIf="selectedRole === 'employe'" class="employe-fields conditional-fields">
+                                        <div class="form-outline flex-fill mb-0">
+                                            <input type="number" id="salaire" class="form-control" formControlName="salaire" />
+                                            <label class="form-label" for="salaire">Salaire (pour les employés)</label>
+                                        </div>
+                                        <div class="form-outline flex-fill mb-0">
+                                            <input type="text" id="poste" class="form-control" formControlName="poste" />
+                                            <label class="form-label" for="poste">Poste (pour les employés)</label>
+                                        </div>
+                                    </div>
+
+                                    <!-- Champs spécifiques à l'Administrateur -->
+                                    <div *ngIf="selectedRole === 'admin'" class="admin-fields conditional-fields">
+                                        <p>Pas de champs spécifiques pour l'administrateur.</p>
+                                    </div>
+
+                                    <!-- Conditions d'utilisation -->
+                                    <div class="form-check d-flex justify-content-center mb-5">
+                                        <input class="form-check-input me-2" type="checkbox" id="form2Example3c" formControlName="terms" required />
+                                        <label class="form-check-label" for="form2Example3">
+                                            J'accepte toutes les déclarations des <a href="#!">Conditions d'utilisation</a>
+                                        </label>
+                                    </div>
+
+                                    <!-- Bouton de soumission -->
+                                    <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
+                                        <button type="submit" class="btn btn-primary btn-lg">S'inscrire</button>
+                                    </div>
+                                </form>
+
+                                <div class="existing-account">
+                                    <p>
+                                      Déjà inscrit ? <a routerLink="/login" class="login-link">Se connecter</a>
+                                    </p>
+                                  </div>
+                            </div>
+
+                
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

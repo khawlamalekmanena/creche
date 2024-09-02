@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="admin-home.component.css">
+    <title>Nursery Management Panel</title>
+</head>
+
+<body>
+    <div class="side-menu">
+        <div class="brand-name">
+            <h1>Kids</h1>
+        </div>
+        <ul>
+            <li><img src="dashboard.png" alt="">&nbsp; <span>Dashboard</span></li>
+            <li class="nav-item" ><img src="" alt=""><a [routerLink]="['/gestion-enfants']">Gestion d'Enfant</a></li>
+            <li><img src="staff.png" alt="">&nbsp;<span>Gestion des parents</span></li>
+            <li><img src="groups.png" alt="">&nbsp;<span>Gestion des Employés</span></li>
+            <li><img src="finance.png" alt="">&nbsp;<span>Gestion des groupes</span></li>
+            <li><img src="finance.png" alt="">&nbsp;<span>Gestion des ressources</span></li>
+            <li><img src="finance.png" alt="">&nbsp;<span><a [routerLink]="['/gestion-activite']">Gestion des activités</a></span></li>
+            <li><img src="finance.png" alt="">&nbsp;<span>Reclamation</span></li>
+            <li><img src="support.png" alt="">&nbsp; <span>Support</span></li>
+            <li><img src="settings.png" alt="">&nbsp;<span>Settings</span></li>
+        </ul>
+    </div>
+    <div class="container">
+        <div class="header">
+            <div class="nav">
+                <div class="search">
+                    <input type="text" placeholder="Search..">
+                    <button type="submit"><img src="search.png" alt=""></button>
+                </div>
+                <div class="user">
+                    <a href="#" class="btn">Add New</a>
+                    <img src="notifications.png" alt="">
+                    <div class="img-case">
+                        <img src="user.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="cards">
+                <a href="#" class="card-link"> 
+                    <div class="card">
+                        <div class="box">
+                          <h3>liste d'enfant</h3>
+                        </div>
+                       
+                        <div class="card-body">
+                          <h2>{{ totalEnfants }}</h2>
+                          
+                        </div>
+            
+
+            
+                        
+                    </div>
+                </a>
+                <a href="#" class="card-link">
+                    <div class="card">
+                        <div class="box">
+                            <h1>53</h1>
+                            <h3>Staff</h3>
+                        </div>
+                        <div class="icon-case">
+                            <img src="staff-icon.png" alt="">
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="card-link">
+                    <div class="card">
+                        <div class="box">
+                            <h1>10</h1>
+                            <h3>Groups</h3>
+                        </div>
+                        <div class="icon-case">
+                            <img src="groups-icon.png" alt="">
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="card-link">
+                    <div class="card">
+                        <div class="box">
+                            <h1>$350000</h1>
+                            <h3>Finance</h3>
+                        </div>
+                        <div class="icon-case">
+                            <img src="finance-icon.png" alt="">
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="content-2">
+                <div class="recent-payments">
+                    <div class="title">
+                        <h2>Recent Payments</h2>
+                        <a href="#" class="btn">View All</a>
+                    </div>
+                    <table>
+                        <tr>
+                            <th>Child</th>
+                            <th>Group</th>
+                            <th>Amount</th>
+                            <th>Option</th>
+                        </tr>
+                        <tr>
+                            <td>John Doe</td>
+                            <td>Toddler Group</td>
+                            <td>$120</td>
+                            <td><a href="#" class="btn">View</a></td>
+                        </tr>
+                        <!-- Add more rows as needed -->
+                    </table>
+                </div>
+                <div class="new-children">
+                    <div class="title">
+                        <h2>New Children</h2>
+                        <a href="#" class="btn">View All</a>
+                    </div>
+                    <table>
+                        <tr>
+                            <th>Profile</th>
+                            <th>Name</th>
+                            <th>Group</th>
+                            <th>Option</th>
+                        </tr>
+                        <tr>
+                            <td><img src="user.png" alt=""></td>
+                            <td>Jane Smith</td>
+                            <td>Infant Group</td>
+                            <td><img src="info.png" alt=""></td>
+                        </tr>
+                        <!-- Add more rows as needed -->
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

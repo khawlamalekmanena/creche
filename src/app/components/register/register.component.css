@@ -1,0 +1,20 @@
+/* Réduit la hauteur du card-body */
+.card-body {
+    height: 800px; /* Ajustez la hauteur selon vos besoins */
+    overflow-y: auto; /* Permet le défilement vertical si le contenu dépasse la hauteur définie */
+  }
+  
+  /* Optionnel : Réduire la hauteur globale de la carte */
+  .card {
+    max-height: 600px; /* Ajustez la hauteur maximale de la carte */
+  }
+  
+  /* Ajustez la hauteur et l'espacement des éléments dans le card-body */
+  .form-outline {
+    margin-bottom: 2rem; /* Réduit l'espacement entre les champs du formulaire */
+  }
+  
+  /* Optionnel : Ajuster le padding si nécessaire */
+  .card-body {
+    padding: 2rem; /* Ajustez le padding intérieur de la card-body */
+  }
