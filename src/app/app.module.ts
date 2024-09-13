@@ -15,6 +15,7 @@ import { AdminHomeComponent } from './components/admin-home/admin-home.component
 import { ParentComponent } from './components/parent/parent.component';
 import { ActiviteComponent } from './components/activite/activite.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,10 +33,10 @@ import { ActiviteComponent } from './components/activite/activite.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule, 
+    ReactiveFormsModule,
     HttpClientModule
   ],
-  providers: [AuthService],
+    // Assurez-vous que EmployeService est ici
   bootstrap: [AppComponent]
 })
 export class AppModule { }

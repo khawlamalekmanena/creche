@@ -8,6 +8,7 @@ import { AdminHomeComponent } from './components/admin-home/admin-home.component
 import { ParentComponent } from './components/parent/parent.component';
 import { ActiviteComponent } from './components/activite/activite.component';
 
+
 const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' }, // Redirection vers la page de connexion par défaut
   { path: 'home', component: HomeComponent }, // Route pour la page d'accueil
@@ -19,6 +20,7 @@ const routes: Routes = [
   {path:'parent', component: ParentComponent},
   { path: 'gestion-enfants', component: EnfantComponent },
   {path: 'gestion-activite', component:ActiviteComponent}
+
 ];
 
 @NgModule({
